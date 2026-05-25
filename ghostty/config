@@ -2,6 +2,21 @@
 # 🌟 CONFIGURACIÓN ESTILO MAC PARA GHOSTTY
 font-family = "JetBrainsMono Nerd Font"
 font-size = 12
+# 1. Ruta absoluta de tu imagen de fondo
+background-image = "/ruta/absoluta/a/tu/imagen.jpg"
+
+# 2. Controlar la opacidad del fondo de la ventana y de la propia imagen
+background-opacity = 1.0
+background-image-opacity = 0.4
+
+# 3. Comportamiento de escalado (Usa 'contain' para centrar sin recortar ni estirar)
+background-image-fit = contain
+
+# 4. Evitar que la imagen se repita en modo mosaico si es pequeña
+background-image-repeat = no-repeat
+
+# 5. Centrar la imagen en el lienzo
+background-image-position = center
 
 # Estética y Transparencia (Look iTerm2)
 background-opacity = 0.85

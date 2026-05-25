@@ -24,5 +24,9 @@ echo "🔗 Vinculando entorno de Neovim..."
 rm -rf "$HOME/.config/nvim"     # Limpia accesos viejos si existen
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 
+echo "🔗 Vinculando entorno de Ghostty..."
+rm -rf "$HOME/.config/ghostty"
+ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
+
 echo "✅ ¡Enlaces simbólicos creados con éxito en tu sistema!"
 echo "💡 Al reiniciar la terminal, tus temas y configuraciones estarán activos."
