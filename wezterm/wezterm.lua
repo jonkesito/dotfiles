@@ -9,24 +9,29 @@ config.color_scheme = "Catppuccin Mocha"
 
 -- 🔤 TIPOGRAFÍA (La que instalamos antes)
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 12.0
+config.font_size = 14.0
 
--- 🖼️ CONFIGURACIÓN DE IMAGEN DE FONDO
 config.background = {
 	{
-		source = {
-			-- ⚠️ REEMPLAZA ESTO CON LA RUTA REAL A TU IMAGEN O WALLPAPER:
-			File = "/home/JonkiSnow/Pictures/waifubot.jpg",
-		},
-		-- "Cover" ajusta la imagen para llenar toda la pantalla sin deformarse
-		height = "Contain",
-		width = "Cover",
+		-- 1. Capa inferior: Fondo completamente negro para rellenar los lados
+		source = { Color = "#000000" },
+		width = "100%",
+		height = "100%",
+	},
+	{
+		-- 2.  Capa superior: Tu imagen centrada sin estirarse
+		source = { File = "/home/JonkiSnow/Pictures/waifubot.jpg" },
+		vertical_align = "Middle",
+		horizontal_align = "Center",
 		repeat_x = "NoRepeat",
 		repeat_y = "NoRepeat",
-		horizontal_align = "Center",
-		vertical_align = "Middle",
-		-- Oscurece la imagen de fondo (0.15 = 15% de brillo) para leer el texto cómodamente
-		hsb = { brightness = 0.03},
+
+		-- Ajuste visual obligatorio: "Contain" escala la imagen sin recortarla
+		height = "Contain",
+		width = "Contain",
+
+		-- Opcional: Dale opacidad a la imagen para que las letras se lean mejor
+		opacity = 0.2,
 	},
 }
 
@@ -37,7 +42,7 @@ config.window_padding = {
 	top = 15,
 	bottom = 15,
 }
-config.hide_tab_bar_if_only_one_tab = false-- Oculta la barra si solo tienes una pestaña activa
+config.hide_tab_bar_if_only_one_tab = false -- Oculta la barra si solo tienes una pestaña activa
 
 -- ⌨️ ATAJOS DE TECLADO TRADICIONALES (Copiado y pegado rápido)
 config.keys = {
