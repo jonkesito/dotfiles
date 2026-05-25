@@ -8,8 +8,8 @@ vim.pack.add({
 	"https://github.com/williamboman/mason.nvim", -- 👈 EL NUEVO REY DE LAS INSTALACIONES
 	"https://github.com/williamboman/mason-lspconfig.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
 	"https://github.com/xiyaowong/transparent.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
+	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
 })
-
 
 -- 2. Carga segura y configuración de MASON
 local mason_ok, mason = pcall(require, "mason")
@@ -29,7 +29,6 @@ if mason_ok and mason_lsp_ok then
 		ensure_installed = { "lua_ls", "pyright", "ts_ls" },
 	})
 end
-
 
 -- mini files ----
 local MiniFiles = require("mini.files")
@@ -72,38 +71,37 @@ require("mini.notify").setup({
 	},
 })
 
-
-
-
-local base16_ok, base16 = pcall(require, "mini.base16")
-if base16_ok then
-	-- Activa el tema 'minicyan' en su variante oscura (dark)
-	base16.config.style = "dark"
-	vim.cmd("colorscheme moonfly")
-end
-
-
-require("mini.base16").setup({
-	palette = {
-		base00 = "#1e1e2e", -- Fondo principal (Gris oscuro / Catppuccin style)
-		base01 = "#181825", -- Fondo de líneas ocultas
-		base02 = "#313244", -- Color de selección visual
-		base03 = "#45475a", -- Comentarios
-		base04 = "#585b70", -- Texto secundario
-		base05 = "#cdd6f4", -- Texto principal (Foreground)
-		base06 = "#f5e0dc", -- Texto brillante
-		base07 = "#b4befe", -- Variables especiales
-		base08 = "#f38ba8", -- Variables / Errores (Rojo)
-		base09 = "#fab387", -- Números (Naranja)
-		base0A = "#f9e2af", -- Clases / Tipos (Amarillo)
-		base0B = "#a6e3a1", -- Strings / Cadenas (Verde)
-		base0C = "#94e2d5", -- Operadores (Cian)
-		base0D = "#89b4fa", -- Funciones / Métodos (Azul)
-		base0E = "#cba6f7", -- Palabras clave / Keywords (Morado)
-		base0F = "#f2cdcd", -- Alertas sutiles
-	},
-})
-
+--
+--
+-- local base16_ok, base16 = pcall(require, "mini.base16")
+-- if base16_ok then
+-- 	-- Activa el tema 'minicyan' en su variante oscura (dark)
+-- 	base16.config.style = "dark"
+-- 	vim.cmd("colorscheme moonfly")
+-- end
+--
+--
+-- require("mini.base16").setup({
+-- 	palette = {
+-- 		base00 = "#1e1e2e", -- Fondo principal (Gris oscuro / Catppuccin style)
+-- 		base01 = "#181825", -- Fondo de líneas ocultas
+-- 		base02 = "#313244", -- Color de selección visual
+-- 		base03 = "#303032", -- Comentarios
+-- 		base04 = "#585b70", -- Texto secundario
+-- 		base05 = "#cdd6f4", -- Texto principal (Foreground)
+-- 		base06 = "#f5e0dc", -- Texto brillante
+-- 		base07 = "#b4befe", -- Variables especiales
+-- 		base08 = "#f38ba8", -- Variables / Errores (Rojo)
+-- 		base09 = "#fab387", -- Números (Naranja)
+-- 		base0A = "#f9e2af", -- Clases / Tipos (Amarillo)
+-- 		base0B = "#a6e3a1", -- Strings / Cadenas (Verde)
+-- 		base0C = "#94e2d5", -- Operadores (Cian)
+-- 		base0D = "#89b4fa", -- Funciones / Métodos (Azul)
+-- 		base0E = "#cba6f7", -- Palabras clave / Keywords (Morado)
+-- 		base0F = "#f2cdcd", -- Alertas sutiles
+-- 	},
+-- })
+--
 -- 🌟 NUEVO: Activar el resaltador de colores e indicadores visuales (TODO/FIXME)
 local hipatterns_ok, hipatterns = pcall(require, "mini.hipatterns")
 if hipatterns_ok then
