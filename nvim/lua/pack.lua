@@ -7,6 +7,7 @@ vim.pack.add({
 	"https://github.com/tpope/vim-fugitive",
 	"https://github.com/williamboman/mason.nvim", -- 👈 EL NUEVO REY DE LAS INSTALACIONES
 	"https://github.com/williamboman/mason-lspconfig.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
+	"https://github.com/xiyaowong/transparent.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
 })
 
 

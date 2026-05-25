@@ -1,0 +1,20 @@
+
+# 🌟 CONFIGURACIÓN ESTILO MAC PARA GHOSTTY
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+
+# Estética y Transparencia (Look iTerm2)
+background-opacity = 0.85
+background-blur = true
+window-padding-x = 10
+window-padding-y = 10
+
+# Pestañas visuales superiores (Como en Mac)
+window-decoration = true
+tab-style = native
+
+# Combinaciones rápidas para pestañas y splits (Estilo iTerm2)
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+shift+d=new_split:down
