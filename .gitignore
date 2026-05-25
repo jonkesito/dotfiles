@@ -1,2 +1,15 @@
 .ssh/
 *.db
+
+# Caché y archivos temporales de Neovim
+nvim/.netrwhist
+nvim/undo/
+nvim/.repro/
+
+# Archivos de respaldo del sistema operativo
+*.swp
+*~
+.DS_Store
+
+# Logs o temporales que puedan generar tus plugins
+*.log

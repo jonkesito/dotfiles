@@ -43,6 +43,22 @@ MiniFiles.setup({
 	},
 })
 
+require("mini.indentscope").setup({
+	-- Aquí puedes personalizar el símbolo de la línea
+	symbol = ".", -- Una línea sólida elegante (por defecto viene con '╎')
+
+	draw = {
+		delay = 100, -- Tiempo de espera antes de dibujar la línea
+		-- Si las animaciones te van lentas en la Máquina Virtual, puedes desactivarla usando:
+		-- animation = require('mini.indentscope').gen_animation.none()
+	},
+
+	options = {
+		-- Te ayuda a ver el bloque actual basándose en dónde tienes el cursor
+		indent_at_cursor = true,
+	},
+})
+
 -- Crear un atajo personalizado exclusivo para las ventanas de mini.files
 vim.api.nvim_create_autocmd("User", {
 	pattern = "MiniFilesBufferCreate",
