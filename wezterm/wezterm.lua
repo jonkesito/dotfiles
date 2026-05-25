@@ -4,6 +4,9 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+
+config.default_prog = { '/usr/bin/zsh' }
+
 -- 🎨 ESQUEMA DE COLORES (Combina perfecto con Catppuccin)
 config.color_scheme = "Catppuccin Mocha"
 
@@ -35,6 +38,8 @@ config.background = {
 	},
 }
 
+
+
 -- 🪟 DETALLES VISUALES DE LA VENTANA
 config.window_padding = {
 	left = 15,
@@ -48,6 +53,11 @@ config.hide_tab_bar_if_only_one_tab = false -- Oculta la barra si solo tienes un
 config.keys = {
 	{ key = "c", mods = "CTRL", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CTRL", action = wezterm.action.PasteFrom("Clipboard") },
+	{
+		key = "C", -- La 'C' mayúscula implica que debes presionar SHIFT
+		mods = "CTRL",
+		action = wezterm.action.SendString("\x03"),
+	},
 }
 
 return config
