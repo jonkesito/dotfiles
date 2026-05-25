@@ -9,6 +9,7 @@ vim.pack.add({
 	"https://github.com/williamboman/mason-lspconfig.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
 	"https://github.com/xiyaowong/transparent.nvim", -- 👈 EL PUENTE OBLIGATORIO PARA EL LSP
 	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+	{ src = "https://github.com/folke/tokyonight.nvim", name = "tokyonight" },
 })
 
 -- 2. Carga segura y configuración de MASON

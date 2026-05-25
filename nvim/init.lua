@@ -9,6 +9,6 @@ require("commands")
 require("treesitter")
 require("lsp")
 
-require("catppuccin-vue")
+require("themes-vue")
 
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme tokyonight-storm")
