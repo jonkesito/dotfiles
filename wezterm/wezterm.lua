@@ -9,7 +9,7 @@ config.color_scheme = "Catppuccin Mocha"
 
 -- 🔤 TIPOGRAFÍA (La que instalamos antes)
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 14.0
+config.font_size = 19.0
 
 config.background = {
 	{
